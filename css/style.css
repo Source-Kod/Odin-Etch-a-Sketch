@@ -5,10 +5,12 @@ body {
 .main {
   display: flex;
   justify-content: center;
+  gap: 10vw;
 }
 
 #grid {
   display: grid;
+  border: 3px black solid;
   grid-template-columns: repeat(16,1fr);
   /* grid-template-rows: repeat(16,1fr); */
   width: 700px;
@@ -16,5 +18,11 @@ body {
 }
 
 .cell {
-  background-color: darkgreen;
+  background-color: lightgrey;
+}
+
+.options {
+  background-color: royalblue;
+  border-radius: 10px;
+  padding: 10px;
 }

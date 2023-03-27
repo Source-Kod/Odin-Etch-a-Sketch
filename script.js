@@ -1,8 +1,7 @@
 function createGrid() {
   // Find the HTML element with the ID "grid" and assign it to the variable "grid"
   let grid = document.querySelector('#grid');
-
-  let grid_size = 16;
+  let grid_size = document.querySelector('#gridsize_input').value;
 
   if(grid_size > 100) grid_size = 100;
 
@@ -16,8 +15,6 @@ function createGrid() {
     grid.appendChild(div);
   }
 }
-
-// function 
 
 // Call the createGrid function to generate the grid
 createGrid();
