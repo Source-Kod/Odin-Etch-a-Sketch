@@ -25,6 +25,46 @@ function startBrush(colour) {
     },true);
   });
 }
+
+function colourChanger(color) {
+  const chosen_color_preview = document.querySelector('#chosen_color_preview');
+  chosen_color_preview.style.backgroundColor = color;
+  startBrush(color);
+}
+
+function createEventsForOptions(){
+  const erase_btn = document.querySelector('#erase_btn')
+  erase_btn.addEventListener('click', () => {
+    colourChanger('lightgrey')
+  })
+
+  const red_btn = document.querySelector('#red_btn')
+  red_btn.addEventListener('click', () => {
+    colourChanger('red')
+  })
+
+  const green_btn = document.querySelector('#green_btn')
+  green_btn.addEventListener('click', () => {
+    colourChanger('green')
+  })
+
+  const blue_btn = document.querySelector('#blue_btn')
+  blue_btn.addEventListener('click', () => {
+    colourChanger('blue')
+  })
+
+  const orange_btn = document.querySelector('#orange_btn')
+  orange_btn.addEventListener('click', () => {
+    colourChanger('orange')
+  })
+
+  const purple_btn = document.querySelector('#purple_btn')
+  purple_btn.addEventListener('click', () => {
+    colourChanger('purple')
+  })
+
+
+}
 // Call the createGrid function to generate the grid
 createGrid();
-startBrush('red')
+createEventsForOptions();
