@@ -17,12 +17,56 @@ body {
   height: 700px;
 }
 
-.cell {
-  background-color: lightgrey;
-}
-
 .options {
   background-color: royalblue;
   border-radius: 10px;
   padding: 10px;
+}
+
+.options button {
+  border-radius: 5px;
+  border: 0;
+}
+
+/* ~~~~~colours~~~~~~ */
+.lightgrey {
+  background-color: lightgrey;
+}
+#erase_btn {
+  background-color: lightgrey;
+}
+
+.red {
+  background-color: red;
+}
+#red_btn {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+#green_btn {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+#blue_btn {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+#orange_btn {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+#purple_btn {
+  background-color: purple;
 }

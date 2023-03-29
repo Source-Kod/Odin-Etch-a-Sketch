@@ -10,11 +10,21 @@ function createGrid() {
   // Use a loop to create 256 HTML <div> elements with the class "cell"
   for(i = 0; i < (grid_size * grid_size); i++) {
     let div = document.createElement('div');
-    div.classList.add('cell');
+    div.className = 'cell lightgrey';
     // Add each <div> element to the HTML element with the ID "grid"
     grid.appendChild(div);
   }
 }
 
+function startBrush(colour) {
+  let [...cells] = document.getElementsByClassName('cell');
+
+  cells.forEach(element => {
+   element.addEventListener('mouseover', () => {
+      element.className = "cell " + colour;
+    },true);
+  });
+}
 // Call the createGrid function to generate the grid
 createGrid();
+startBrush('red')
