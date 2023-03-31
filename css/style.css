@@ -1,28 +1,32 @@
+/* Set the background color for the entire page */
 body {
   background-color: #282b36;
 }
 
+/* Create a flex container for the main content and options */
 .main {
   display: flex;
   justify-content: center;
   gap: 5vw;
 }
 
+/* Style the grid container */
 #grid {
   display: grid;
   border: 3px black solid;
   grid-template-columns: repeat(16,1fr);
-  /* grid-template-rows: repeat(16,1fr); */
   width: 700px;
   height: 700px;
 }
 
+/* Style the options container */
 .options {
   background-color: royalblue;
   border-radius: 10px;
   padding: 10px;
 }
 
+/* Style the buttons in the options container */
 .options button {
   border-radius: 5px;
   border: 0;
