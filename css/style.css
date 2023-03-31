@@ -5,7 +5,7 @@ body {
 .main {
   display: flex;
   justify-content: center;
-  gap: 10vw;
+  gap: 5vw;
 }
 
 #grid {

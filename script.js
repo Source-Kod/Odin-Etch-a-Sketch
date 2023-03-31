@@ -9,15 +9,23 @@ function createGrid() {
 
   // Use a loop to create 256 HTML <div> elements with the class "cell"
   for(i = 0; i < (grid_size * grid_size); i++) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'cell lightgrey';
     // Add each <div> element to the HTML element with the ID "grid"
     grid.appendChild(div);
   }
 }
 
+function deleteGrid() {
+  const [...old_grid] = document.getElementsByClassName('cell');
+
+  old_grid.forEach(element => {
+    element.remove();
+  });
+}
+
 function startBrush(colour) {
-  let [...cells] = document.getElementsByClassName('cell');
+  const [...cells] = document.getElementsByClassName('cell');
 
   cells.forEach(element => {
    element.addEventListener('mouseover', () => {
@@ -27,7 +35,7 @@ function startBrush(colour) {
 }
 
 function startRandomColourBrush() {
-  let [...cells] = document.getElementsByClassName('cell');
+  const [...cells] = document.getElementsByClassName('cell');
 
   cells.forEach(element => {
    element.addEventListener('mouseover', () => {
@@ -43,6 +51,12 @@ function colourChanger(color) {
 }
 
 function createEventsForOptions(){
+  const create_grid_btn = document.querySelector('#create_grid_btn');
+  create_grid_btn.addEventListener('click', () => {
+    deleteGrid();
+    createGrid();
+  })
+
   const random_btn = document.querySelector('#random_btn');
   random_btn.addEventListener('click', () => {
     startRandomColourBrush();
